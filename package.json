@@ -1,0 +1,29 @@
+{
+  "name": "@qiqi1996/qi-i18n-node",
+  "version": "1.0.0",
+  "description": "A lightweight i18N module for NodeJS, with Prepared Statement like function provided.",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "scripts": {
+    "dev": "node -r esm bootstrap.js dev",
+    "build": "node -r esm bootstrap.js build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SaekiRaku/qi-i18n-node.git"
+  },
+  "keywords": [
+    "i18N"
+  ],
+  "author": "QIQI1996",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SaekiRaku/qi-i18n-node/issues"
+  },
+  "homepage": "https://github.com/SaekiRaku/qi-i18n-node#readme",
+  "devDependencies": {
+    "@rollup/plugin-strip": "^1.3.1",
+    "esm": "^3.2.25",
+    "rollup": "^1.27.5"
+  }
+}
