@@ -1,6 +1,6 @@
 {
   "name": "@qiqi1996/qi-i18n-node",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A lightweight i18N module for NodeJS, with Prepared Statement like function provided.",
   "main": "dist/index.js",
   "module": "dist/index.es.js",

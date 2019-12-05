@@ -39,6 +39,67 @@ console.error(scope["error"]("name"));
 
 If you don't want `?` to be replaced by arguments, please use `\\?`.
 
+## APIs
+
+> let scope = new i18N();
+
+### scope.translation(transObj);
+
+- Type: Function
+- Parms:
+    - `Object` transObj
+- Return: Function
+
+Make a `trasnlation function`, `transObj` should be like:
+
+```javascript
+{
+    "en": "English ?",
+    "zh_CN": "中文 ?",
+    "ja": "日本语 ?"
+    "...": "Other languages ?"
+}
+```
+
+It will return a function. And when calling it, it will return a `String` from the `transObj`, and Every `?` will be replaced by the parameter that pass into the funcion.
+
+For example, if we calling the `translation` and pass in previous `transObj`, and set the using language to "English" by `scope.config.use("en")`, and then call that function with `trasnlationFunction("Hello World")`. We will got `English Hello World`.
+
+If you don't want `?` to be replaced by arguments, please use `\\?`.
+
+### scope.config
+
+- Type: Object
+
+Use config to set the using language, by `scope.config.using = "language key"` or `scope.config.use()`;
+
+### scope.add(key, translation);
+
+- Type: Function
+- Return: Function
+
+Add translation function, as same as `scope[key] = translation`
+
+### scope.keys
+
+- Type: Array
+
+All keys of translations.
+
+### scope.get(key, ...args)
+
+- Type: Function
+- Return: Function
+
+Get(and call) translation function, as same as `scope[key](...args)`
+
+### scope._(key)
+
+- Type: Function
+- Return: Function
+
+Get(and call) translation function, as same as `scope[key](...args)`
+
 ## License
 
 MIT

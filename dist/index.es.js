@@ -28,6 +28,7 @@ class Config {
 class i18N {
     constructor() {
         this.config = new Config();
+        this.keys = new Array();
         this.translation = translation.bind({
             config: this.config
         });
@@ -51,6 +52,9 @@ class i18N {
     }
 
     add(key, translation) {
+        if (this.keys.indexOf(key) == -1) {
+            this.keys.push(key);
+        }
         this[key] = translation;
     }
 }
